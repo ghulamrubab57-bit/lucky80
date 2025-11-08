@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucky Committee</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #4b1f00;
+      color: white;
+      text-align: center;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #ff8800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .menu {
+      position: relative;
+    }
+
+    .menu button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 35px;
+      background-color: #fff;
+      color: black;
+      border-radius: 5px;
+      min-width: 120px;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .dropdown a:hover {
+      background-color: #ff8800;
+      color: white;
+    }
+
+    .menu:hover .dropdown {
+      display: block;
+    }
+
+    /* MOVING TEXT BAR */
+    .ticker {
+      background-color: orange;
+      color: black;
+      font-size: 16px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker p {
+      display: inline-block;
+      animation: scroll 15s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* DAILY DRAW BOX */
+    .draw-box {
+      background-color: #444;
+      border-radius: 40px;
+      padding: 15px 20px;
+      margin: 20px auto;
+      width: 70%;
+      max-width: 500px;
+      color: white;
+      font-size: 18px;
+    }
+
+    /* SLIDER */
+    .slider {
+      margin: 20px auto;
+      width: 80%;
+      max-width: 800px;
+      height: 250px;
+      background: linear-gradient(to right, #ffa500, #ffff66);
+      border-radius: 10px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      animation: slide 16s infinite;
+    }
+
+    @keyframes slide {
+      0% { background-image: url('https://picsum.photos/800/250?1'); }
+      25% { background-image: url('https://picsum.photos/800/250?2'); }
+      50% { background-image: url('https://picsum.photos/800/250?3'); }
+      75% { background-image: url('https://picsum.photos/800/250?4'); }
+      100% { background-image: url('https://picsum.photos/800/250?1'); }
+    }
+
+    /* BOXES */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px;
+    }
+
+    .card {
+      background-color: red;
+      width: 200px;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .card button {
+      background-color: orange;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #ff8800;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">LuckyComiti</div>
+    <div class="menu">
+      <button>Account</button>
+      <div class="dropdown">
+        <a href="#">Sign Up</a>
+        <a href="#">Login</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker">
+    <p>کمیٹی جمع کروانے کی آخری تاریخ دس ہوگی آدھے پیسے کمیٹی کے بعد واپس کر لئیے جائیں گے اور آدھے جمع کر لئیے جائیں گے</p>
+  </div>
+
+  <div class="draw-box">
+    <strong>Prize Daily Draw</strong> 🎁  
+    <p>Countdown: <span id="timer">24:00:00</span></p>
+    <button>Participate</button>
+  </div>
+
+  <div class="slider">
+    Slider
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <p>Comiti<br>Price<br>Draw Date<br>Countdown<br>Information</p>
+      <button>Participate</button>
+    </div>
+    <div class="card">
+      <p>Comiti<br>Price<br>Draw Date<br>Countdown<br>Information</p>
+      <button>Participate</button>
+    </div>
+    <div class="card">
+      <p>Comiti<br>Price<br>Draw Date<br>Countdown<br>Information</p>
+      <button>Participate</button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Lucky Committee | All Rights Reserved
+  </footer>
+
+</body>
+</html>
